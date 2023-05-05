@@ -1,8 +1,11 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
+using System.Xml;
+using KinematicCharacterController;
 using UnityEngine;
 
-public class MapSegment : MonoBehaviour
+public class MapSegment : MonoBehaviour, IMoverController
 {
     public Vector3 TargetRotation;
     
@@ -20,7 +23,11 @@ public class MapSegment : MonoBehaviour
     [SerializeField]
     private bool _isRotating;
 
+    private Vector3 _targetPosition = Vector3.zero;
+    private Quaternion _targetRotation = Quaternion.identity;
 
+    
+    
     public void UpdateTargetRotation(Vector3 targetRotation)
     {
         if (!_isRotating)
@@ -39,6 +46,13 @@ public class MapSegment : MonoBehaviour
     {
         base.transform.rotation = Quaternion.Euler(rotation);
     }
+
+    public void Awake()
+    {
+        _targetPosition = base.transform.position;
+        GetComponent<PhysicsMover>().MoverController = this;
+    }
+
     void Update()
     {
         if (_rotationDirty)
@@ -58,7 +72,7 @@ public class MapSegment : MonoBehaviour
         while (t < RiseTime)
         {
             t += Time.deltaTime;
-            base.transform.position = Vector3.LerpUnclamped(_originalPosition, _nuPosition, t / RiseTime);
+            _targetPosition = Vector3.LerpUnclamped(_originalPosition, _nuPosition, t / RiseTime);
             //base.transform.rotation = Quaternion.Lerp(base.transform.rotation, Quaternion.Euler( TargetRotation), t/RiseTime); //,// t / RotationSpeed));
             
             if (transform.position == _nuPosition)
@@ -74,7 +88,7 @@ public class MapSegment : MonoBehaviour
         {
             t += Time.deltaTime;
             //base.transform.position = Vector3.Lerp(_originalPosition, _nuPosition, t / RiseTime);
-            base.transform.rotation = Quaternion.LerpUnclamped(base.transform.rotation, Quaternion.Euler( TargetRotation), t/RotationTime); //,// t / RotationSpeed));
+            _targetRotation = Quaternion.LerpUnclamped(base.transform.rotation, Quaternion.Euler( TargetRotation), t/RotationTime); //,// t / RotationSpeed));
         
             // this stuff is finnicky
             if (transform.rotation.eulerAngles == TargetRotation)
@@ -89,12 +103,21 @@ public class MapSegment : MonoBehaviour
         while (t < FallTime)
         {
             t += Time.deltaTime;
-            base.transform.position = Vector3.Lerp(_nuPosition, _originalPosition, t/FallTime);
+            _targetPosition = Vector3.LerpUnclamped(_nuPosition, _originalPosition, t/FallTime);
             yield return null;
         }
-
+        // straight up set it
+        _targetPosition = _originalPosition;
+        _targetRotation = Quaternion.Euler(TargetRotation);
+        
         _isRotating = false;
         yield break;
     }
 
+    public void UpdateMovement(out Vector3 goalPosition, out Quaternion goalRotation, float deltaTime)
+    {
+        goalPosition = _targetPosition ;
+        goalRotation = _targetRotation;
+        
+    }
 }

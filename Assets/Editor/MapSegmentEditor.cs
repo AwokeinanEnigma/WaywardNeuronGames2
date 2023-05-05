@@ -3,6 +3,7 @@ using UnityEngine;
 
 namespace Editor
 {
+    #if UNITY_EDITOR
     [CustomEditor(typeof(MapSegment))]
     public class MapSegmentEditor : UnityEditor.Editor
     {
@@ -17,4 +18,5 @@ namespace Editor
             }
         }
     }
+    #endif
 }
