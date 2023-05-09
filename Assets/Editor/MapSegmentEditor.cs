@@ -4,7 +4,7 @@ using UnityEngine;
 namespace Editor
 {
     #if UNITY_EDITOR
-    [CustomEditor(typeof(MapSegment))]
+   /*[CustomEditor(typeof(MapSegment))]
     public class MapSegmentEditor : UnityEditor.Editor
     {
         public override void OnInspectorGUI()
@@ -17,6 +17,6 @@ namespace Editor
                 mapSegment.UpdateTargetRotation(new Vector3(0, mapSegment.transform.rotation.eulerAngles.y -90,0));
             }
         }
-    }
+    }*/
     #endif
 }

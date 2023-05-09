@@ -41,51 +41,63 @@
     <ImplicitlyExpandDesignTimeFacades>false</ImplicitlyExpandDesignTimeFacades>
   </PropertyGroup>
   <ItemGroup>
-     <Compile Include="Assets\VOID\Scripts\Core\Player\PlayerMotor.cs" />
-     <Compile Include="Assets\VOID\Scripts\MapSegmentSetter.cs" />
-     <Compile Include="Assets\VOID\Scripts\Core\LedgeDetection\LedgeDetector.cs" />
-     <Compile Include="Assets\VOID\Scripts\Core\Input\InputEventData.cs" />
-     <Compile Include="Assets\VOID\Scripts\Core\FlickerEnable.cs" />
-     <Compile Include="Assets\VOID\Scripts\Core\Movement\Gravity\GravitySphere.cs" />
-     <Compile Include="Assets\MapSegment.cs" />
-     <Compile Include="Assets\VOID\Scripts\Core\Movement\Gravity\CustomGravity.cs" />
-     <Compile Include="Assets\VOID\Scripts\Core\Interfaces\IOnIncomingDamage.cs" />
-     <Compile Include="Assets\VOID\Scripts\Core\DamageInfo.cs" />
-     <Compile Include="Assets\VOID\Scripts\Core\CameraController.cs" />
-     <Compile Include="Assets\VOID\Scripts\KinematicCharacterController\Core\ICharacterController.cs" />
-     <Compile Include="Assets\VOID\Scripts\Core\DamageReport.cs" />
-     <Compile Include="Assets\VOID\Scripts\Core\Entities\HitboxHandler.cs" />
-     <Compile Include="Assets\VOID\Scripts\KinematicCharacterController\Core\KinematicCharacterSystem.cs" />
-     <Compile Include="Assets\VOID\Scripts\OverheadCameraManager.cs" />
-     <Compile Include="Assets\VOID\Scripts\Core\Interfaces\IOnDamageOther.cs" />
-     <Compile Include="Assets\VOID\Scripts\Core\Movement\Gravity\GravityPlane.cs" />
-     <Compile Include="Assets\VOID\Scripts\Core\SurfaceHolder.cs" />
-     <Compile Include="Assets\VOID\Scripts\KinematicCharacterController\Core\PhysicsMover.cs" />
-     <Compile Include="Assets\VOID\Scripts\Core\FPS.cs" />
-     <Compile Include="Assets\VOID\Scripts\KinematicCharacterController\Core\IMoverController.cs" />
-     <Compile Include="Assets\VOID\Scripts\Core\LedgeDetection\LedgeDetectionSettings.cs" />
-     <Compile Include="Assets\VOID\TickObject.cs" />
-     <Compile Include="Assets\VOID\Scripts\KinematicCharacterController\Core\KCCSettings.cs" />
-     <Compile Include="Assets\VOID\Scripts\Core\Movement\Gravity\GravityBox.cs" />
-     <Compile Include="Assets\TutorialInfo\Scripts\Readme.cs" />
-     <Compile Include="Assets\VOID\Scripts\Core\Movement\Gravity\GravityBoxRedux.cs" />
-     <Compile Include="Assets\VOID\Scripts\KinematicCharacterController\Core\KinematicCharacterMotor.cs" />
-     <Compile Include="Assets\VOID\Scripts\KinematicCharacterController\Core\ReadOnlyAttribute.cs" />
-     <Compile Include="Assets\VOID\Scripts\Core\Extra\GizmosEx.cs" />
-     <Compile Include="Assets\VOID\Scripts\Core\Interfaces\IOnDeath.cs" />
-     <Compile Include="Assets\VOID\Scripts\Core\SurfaceInfo.cs" />
-     <Compile Include="Assets\VOID\Scripts\Core\Movement\Gravity\PlanetRotator.cs" />
-     <Compile Include="Assets\VOID\Scripts\Core\LedgeDetection\Ledge.cs" />
-     <Compile Include="Assets\VOID\Scripts\Core\Entities\HealthComponent.cs" />
-     <Compile Include="Assets\VOID\Scripts\Core\Movement\Gravity\GravitySource.cs" />
-     <Compile Include="Assets\VOID\Scripts\Core\Interval.cs" />
-     <Compile Include="Assets\VOID\Scripts\Core\Interfaces\IOnTakeDamage.cs" />
-     <Compile Include="Assets\VOID\Scripts\Core\LedgeDetection\LedgeDetectionUtil.cs" />
-     <Compile Include="Assets\VOID\Scripts\Core\MapObjectHandler.cs" />
-     <Compile Include="Assets\Platform.cs" />
-     <Compile Include="Assets\VOID\Scripts\PlatformSetter.cs" />
-     <Compile Include="Assets\KinematicCharacterController\Walkthrough\8- Creating a moving platform\Scripts\MyMovingPlatform.cs" />
+     <Compile Include="Assets\Scripts\Enigmaware\Player\PlayerMotor.cs" />
+     <Compile Include="Assets\Scripts\CryptidLand\MapSegment\MapSegmentSetter.cs" />
+     <Compile Include="Assets\Scripts\Enigmaware\World\RotateObject.cs" />
+     <Compile Include="Assets\Scripts\CryptidLand\ClickHandler.cs" />
+     <Compile Include="Assets\Scripts\Enigmaware\LedgeDetection\LedgeDetector.cs" />
+     <Compile Include="Assets\Scripts\Enigmaware\Input\InputEventData.cs" />
+     <Compile Include="Assets\Scripts\Enigmaware\World\FlickerEnable.cs" />
+     <Compile Include="Assets\Scripts\CryptidLand\MapSegment\Platform.cs" />
+     <Compile Include="Assets\Scripts\Enigmaware\Movement\Gravity\GravitySphere.cs" />
+     <Compile Include="Assets\Scripts\CryptidLand\MapSegment\MapSegment.cs" />
+     <Compile Include="Assets\Scripts\Enigmaware\Movement\Gravity\CustomGravity.cs" />
+     <Compile Include="Assets\Scripts\Enigmaware\Interfaces\IOnIncomingDamage.cs" />
+     <Compile Include="Assets\Scripts\Enigmaware\Entities\DamageInfo.cs" />
+     <Compile Include="Assets\Scripts\Enigmaware\Player\CameraController.cs" />
+     <Compile Include="Assets\Scripts\Enigmaware\KinematicCharacterController\Core\ICharacterController.cs" />
      <Compile Include="Assets\KinematicCharacterController\Examples\Scripts\ExampleMovingPlatform.cs" />
+     <Compile Include="Assets\Scripts\Enigmaware\Entities\DamageReport.cs" />
+     <Compile Include="Assets\Scripts\Enigmaware\Entities\HitboxHandler.cs" />
+     <Compile Include="Assets\Scripts\Enigmaware\KinematicCharacterController\Core\KinematicCharacterSystem.cs" />
+     <Compile Include="Assets\Scripts\CryptidLand\OverheadMap\OverheadCameraMover.cs" />
+     <Compile Include="Assets\Scripts\Enigmaware\Interfaces\IOnDamageOther.cs" />
+     <Compile Include="Assets\Scripts\Enigmaware\Movement\Gravity\GravityPlane.cs" />
+     <Compile Include="Assets\Scripts\Enigmaware\World\SurfaceHolder.cs" />
+     <Compile Include="Assets\Scripts\Enigmaware\KinematicCharacterController\Core\PhysicsMover.cs" />
+     <Compile Include="Assets\Scripts\Enigmaware\World\FPS.cs" />
+     <Compile Include="Assets\Scripts\Enigmaware\KinematicCharacterController\Core\IMoverController.cs" />
+     <Compile Include="Assets\Scripts\Enigmaware\LedgeDetection\LedgeDetectionSettings.cs" />
+     <Compile Include="Assets\Scripts\CryptidLand\TickObject.cs" />
+     <Compile Include="Assets\Scripts\CryptidLand\MapSegment\PlatformSetter.cs" />
+     <Compile Include="Assets\Scripts\Enigmaware\KinematicCharacterController\Core\KCCSettings.cs" />
+     <Compile Include="Assets\Scripts\Enigmaware\Movement\Gravity\GravityBox.cs" />
+     <Compile Include="Assets\TutorialInfo\Scripts\Readme.cs" />
+     <Compile Include="Assets\Scripts\Enigmaware\Movement\Gravity\GravityBoxRedux.cs" />
+     <Compile Include="Assets\Scripts\Enigmaware\KinematicCharacterController\Core\KinematicCharacterMotor.cs" />
+     <Compile Include="Assets\Scripts\Enigmaware\KinematicCharacterController\Core\ReadOnlyAttribute.cs" />
+     <Compile Include="Assets\Scripts\Enigmaware\Extra\GizmosEx.cs" />
+     <Compile Include="Assets\Scripts\Enigmaware\Misc\DefaultMover.cs" />
+     <Compile Include="Assets\Scripts\Enigmaware\Interfaces\IOnDeath.cs" />
+     <Compile Include="Assets\Scripts\Enigmaware\World\SurfaceInfo.cs" />
+     <Compile Include="Assets\Scripts\Enigmaware\Movement\Gravity\PlanetRotator.cs" />
+     <Compile Include="Assets\Scripts\Enigmaware\LedgeDetection\Ledge.cs" />
+     <Compile Include="Assets\Scripts\Enigmaware\Entities\HealthComponent.cs" />
+     <Compile Include="Assets\Scripts\Enigmaware\Movement\Gravity\GravitySource.cs" />
+     <Compile Include="Assets\KinematicCharacterController\Walkthrough\8- Creating a moving platform\Scripts\MyMovingPlatform.cs" />
+     <Compile Include="Assets\Scripts\Enigmaware\Misc\Interval.cs" />
+     <Compile Include="Assets\Scripts\Enigmaware\Interfaces\IOnTakeDamage.cs" />
+     <Compile Include="Assets\Scripts\Enigmaware\LedgeDetection\LedgeDetectionUtil.cs" />
+     <Compile Include="Assets\Scripts\CryptidLand\OverheadMap\OverheadMapInteractor.cs" />
+     <Compile Include="Assets\Scripts\Enigmaware\World\Bobble.cs" />
+     <Compile Include="Assets\Scripts\Enigmaware\Weaponry\WeaponMachine.cs" />
+     <Compile Include="Assets\Scripts\Enigmaware\EntityStates\EntityState.cs" />
+     <Compile Include="Assets\Scripts\Enigmaware\EntityStates\EntityStateMachine.cs" />
+     <Compile Include="Assets\Scripts\Enigmaware\EntityStates\SerializableEntityState.cs" />
+     <Compile Include="Assets\Scripts\Enigmaware\EntityStates\Empty.cs" />
+     <Compile Include="Assets\Scripts\Enigmaware\Weaponry\BaseWeaponState.cs" />
+     <Compile Include="Assets\Scripts\Enigmaware\Weaponry\EmptyWeapon.cs" />
+     <Compile Include="Assets\Scripts\CryptidLand\Weapons\Rifle.cs" />
      <Reference Include="UnityEngine">
      <HintPath>C:\Users\Tom\Documents\Unity\Hub\Editor\2021.3.13f1\Editor\Data\Managed\UnityEngine\UnityEngine.dll</HintPath>
      </Reference>
@@ -761,8 +773,8 @@
      <Reference Include="Unity.Searcher.Editor">
      <HintPath>C:\Users\Tom\CryptidLand\Library\ScriptAssemblies\Unity.Searcher.Editor.dll</HintPath>
      </Reference>
-     <Reference Include="Unity.RenderPipelines.Core.Runtime">
-     <HintPath>C:\Users\Tom\CryptidLand\Library\ScriptAssemblies\Unity.RenderPipelines.Core.Runtime.dll</HintPath>
+     <Reference Include="Unity.2D.Sprite.Editor">
+     <HintPath>C:\Users\Tom\CryptidLand\Library\ScriptAssemblies\Unity.2D.Sprite.Editor.dll</HintPath>
      </Reference>
      <Reference Include="Unity.VisualScripting.SettingsProvider.Editor">
      <HintPath>C:\Users\Tom\CryptidLand\Library\ScriptAssemblies\Unity.VisualScripting.SettingsProvider.Editor.dll</HintPath>
@@ -784,6 +796,9 @@
      </Reference>
      <Reference Include="UnityEngine.UI">
      <HintPath>C:\Users\Tom\CryptidLand\Library\ScriptAssemblies\UnityEngine.UI.dll</HintPath>
+     </Reference>
+     <Reference Include="Unity.RenderPipelines.Core.Runtime">
+     <HintPath>C:\Users\Tom\CryptidLand\Library\ScriptAssemblies\Unity.RenderPipelines.Core.Runtime.dll</HintPath>
      </Reference>
      <Reference Include="Unity.PlasticSCM.Editor">
      <HintPath>C:\Users\Tom\CryptidLand\Library\ScriptAssemblies\Unity.PlasticSCM.Editor.dll</HintPath>
